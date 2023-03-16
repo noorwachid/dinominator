@@ -10,7 +10,6 @@ class Loop {
 		addEventListener('keydown', (event) => this.on(event));
 		addEventListener('keyup', (event) => this.on(event));
 		addEventListener('click', (event) => this.on(event));
-		addEventListener('touchstart', (event) => this.on(event));
 
 		let previousTime = 0;
 		const callback = (elapsedTime) => {
@@ -52,7 +51,7 @@ class Loop {
 			}
 		}
 
-		if (event.type === 'click' || event.type === 'touchstart') {
+		if (event.type === 'click') {
 			if (event.clientY > innerHeight / 3 * 2) {
 				this.restart();
 
