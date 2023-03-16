@@ -28,7 +28,7 @@ class Player {
 	}
 
 	on(event) {
-		if (event.type === 'jump') {
+		if (event.type === 'jump' && this.grounded) {
 			this.jumpState = true;
 			this.grounded = false;
 		}
